@@ -14,7 +14,7 @@ SECRET_KEY = '3gjm^_scxasa&ewe64tb$ass7t)z*a45aycsqnwo3j!+^=xq&j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOST=["*"]
+ALLOWED_HOST=["vamo13.herokuapp.com/"]
 
 
 # Application definition
@@ -33,9 +33,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4aj@)+9528g3du$)189hsh^gh%t9)lzmb4e4qxofmpx+kt%nui'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #False
+DEBUG = False
 
-ALLOWED_HOSTS = [] #["*"]
+ALLOWED_HOSTS = ["vamo13.herokuapp.com/"] #["*"]
 STATICFILES_DIRS=[
     "prjt/prjt/veille/static/",
 ]
@@ -56,6 +56,9 @@ INSTALLED_APPS = (
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    
+    'whitenoise.middleware.security.SecurityMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,6 +134,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL='/static/'
 
 # Default primary key field type
