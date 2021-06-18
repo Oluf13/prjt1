@@ -1,1 +1,1 @@
-web: gunicorn prjt.wsgi --log-file=-
+web: gunicorn prjt.wsgi 
