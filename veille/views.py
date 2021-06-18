@@ -14,7 +14,7 @@ from requests import Response
 from .fromulaire import CreateUserForm, Utilform, logpage
 from .formulaire_requete import req
 from .models import information, Veille, Req, Article
-from .selenium1 import cree_fich
+#from .selenium1 import cree_fich
 from django.contrib import messages
 
 name_of_user = ''
