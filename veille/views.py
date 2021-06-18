@@ -227,11 +227,11 @@ def sans_mot_vide(mot_cle):
     return mot_cle
 
 
-def all_users_articles(request):
+"""def all_users_articles(request):
     users = Veille.objects.all()
     for user in users:
         cree_fich(user.Prenom)
-    return render(request, 'main/arts.html')
+    return render(request, 'main/arts.html')"""
 
 
 
