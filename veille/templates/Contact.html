@@ -1,0 +1,174 @@
+{% load static %}
+<html>
+<title>Contact</title>
+<head>
+	<link rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/a77b2571a6.js" crossorigin="anonymous"></script>
+</head>
+
+	</br>
+
+<div id="menu-slider">
+	<div id="menu-block">
+			<nav href="#" class="menu-close" rel="nofollow">
+				<ul class="level-1">
+					<li> <a class="menu-item" href="" target="_blank">Vamo </a> </li>
+					<li class="wnd-active wnd-homepage"><a  href="http://127.0.0.1:8000"><span class="menu-item-text">Accueil</span></a></li>
+					<li>	<a  href="http://127.0.0.1:8000/inscription"><span class="menu-item-text">inscription</span></a></li>
+					<li>	<a  href="http://127.0.0.1:8000/connexion"><span class="menu-item-text">Connexion</span></a></li>
+				   </ul>
+								</nav></div></div>
+
+	<style>
+        center{
+	     background-repeat:no-repeat;
+	     background-size:100%;
+	     }
+	    h3{
+	    margin-left:350px;
+	    margin-top:380px;
+
+	    }
+        ul {
+           list-style-type: none;
+           margin: 0;
+            padding: 0;}
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #000000  !important;
+		}
+		.user_card {
+		    top:100px;
+		    left:300px;
+			width: 450px;
+			weight:200px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #fdd92c;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+        .span{
+        background:#999999;}
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: #000000;
+		}
+		.login_btn {
+			width: 50%;
+			background: black !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #6d546d !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		 header{
+                  background:#202860;}
+                   header::after{
+                   content:'';
+                   display:table;
+                   clear :both;}
+                   nav ul{
+                     margin:0;
+                     padding:0;
+                     list_style: none;}
+                     nav li{
+                    display: inline-block;
+                   margin-left: 200px;
+                   position:relative;
+                    color: #6facfb;
+                    }
+                   nav a {
+                  color:#FFFFFF;
+                  text-decoration: none;
+                  text-transform:uppercase;
+                  font-size:20px;
+                background:#202860;
+                 }
+
+         input{
+         width:100%;
+         height:30px;
+         clear:both;
+         align:center;}
+         label{
+         font-size:20px;
+         }
+         .fab{
+         color:white;
+         font-size:40px;
+         margin-left:300px;}
+         .fas{
+         color:white;
+         font-size:40px;
+         margin-left:300px;}
+
+         .infos{
+         font-size:80px;
+         margin-left:100px;
+         margin-top: 0px;
+         text-shadow:0 1px 0 #ccc,
+          0 2px 0 #000000,
+          0 3px 0 #bbb,
+          0 4px 0 #b9b9b9,
+           0 5px 0 #aaa,
+          0 6px 1px rgba(0,0,0,.1),
+          0 0 5px rgba(0,0,0,.1),
+          0 1px 3px rgba(0,0,0,.3),
+          0 3px 5px rgba(0,0,0,.2),
+          0 5px 10px rgba(0,0,0,.25),
+          0 10px 10px rgba(0,0,0,.2),
+          0 20px 20px rgba(0,0,0,.15);color:#e7d401;}
+
+         </style>
+<body>
+
+</br><hr>
+<center class="form.css" style="background-image: url({% static 'imgs/background.jpg'%});">
+	<h1 class="infos">Vos Informations Personnelles !</h1>
+	<div class="user_card">
+
+ <form method="POST" class="post_form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="btn login_btn" type="submit" value="Enregister">
+ </form>
+	</div>
+	</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+</center>
+</body>
+<footer>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook"></i>
+<i class="fas fa-envelope"></i>
+</footer>
+</html>

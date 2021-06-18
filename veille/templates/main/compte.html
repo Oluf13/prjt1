@@ -1,0 +1,236 @@
+{% load static %}
+<html>
+<head>
+	<title>Compte</title>
+	<link rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/a77b2571a6.js" crossorigin="anonymous"></script>
+</head>
+</br>
+		<div id="menu-slider">
+	<div id="menu-block">
+			<nav href="#" class="menu-close" rel="nofollow">
+				<ul class="level-1">
+					<li> <a class="menu-item" href="" target="_blank">Vamo </a> </li>
+					<li class="wnd-active wnd-homepage"><a  href="http://127.0.0.1:8000"><span class="menu-item-text">Accueil</span></a></li>
+					<li> <a  href="http://127.0.0.1:8000/logout/" >Deconnexion </a> </li>
+
+					</li></ul>
+
+								</nav></div></div>
+
+	<style>
+	.msg{ color:white;}
+ center{
+
+	     background-repeat:no-repeat;
+	     background-size:100%;
+	     }
+	    h3{
+	    margin-left:350px;
+	    margin-top:380px;
+
+	    }
+        ul {
+           list-style-type: none;
+           margin: 0;
+            padding: 0;}
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #000000  !important;
+		}
+
+        .span{
+        background:#999999;}
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: #000000;
+		}
+		.login_btn {
+			width: 20%;
+			background: #d8bc0e !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background: #6d546d !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		 header{
+                  background:#202860;}
+                   header::after{
+                   content:'';
+                   display:table;
+                   clear :both;}
+                   nav ul{
+                     margin:0;
+                     padding:0;
+                     list_style: none;}
+                     nav li{
+                    display: inline-block;
+                   margin-left: 300px;
+                   position:relative;
+                    color: #6facfb;
+                    }
+                   nav a {
+                  color:#FFFFFF;
+                  text-decoration: none;
+                  text-transform:uppercase;
+                  font-size:20px;
+                background:#202860;
+                 }
+
+         input{
+         width:45%;
+         height:40px;
+         margin-left:550px;
+         clear:both;
+         align:center;}
+         label{
+         margin-left:550px;
+         font-size:20px;
+         color:white;
+         }
+         .fab{
+         color:white;
+         font-size:40px;
+         margin-left:300px;}
+         .fas{
+         color:white;
+         font-size:40px;
+         margin-left:300px;}
+
+
+ @keyframes tipsy {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+
+}
+
+.menu-item{
+  color: WHITE;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:60px;
+  margin-top:0px;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.menu-item:before,
+.menu-item:after {
+  content: '';
+  padding: .9em .4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 10px solid black;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out tipsy;
+}
+
+.menu-item:before {
+  border-color: #e0bd00 #e0bd00 #e0bd00 #e0bd00 ;
+  z-index: -1;
+}
+
+.menu-item:after {
+  border-color: #e0bd00 #e0bd00 #e0bd00 #e0bd00;
+  box-shadow: 25px 25px 25px rgba(0, 0,0, 0.8);
+}
+.desc{
+font-size: 15px;
+margin-left:0px;
+margin-top:150px;
+color:black;}
+
+.ab{
+color:#fcdc12;}
+
+.lien{
+color:#d8bc0e;
+margin-left:950px;}
+
+.text2{
+         font-size:30px;
+         margin-left:100px;
+         margin-top: 0px;
+         text-shadow:0 1px 0 #ccc,
+          0 2px 0 #000000,
+          0 3px 0 #bbb,
+          0 4px 0 #b9b9b9,
+           0 5px 0 #aaa,
+          0 6px 1px rgba(0,0,0,.1),
+          0 0 5px rgba(0,0,0,.1),
+          0 1px 3px rgba(0,0,0,.3),
+          0 3px 5px rgba(0,0,0,.2),
+          0 5px 10px rgba(0,0,0,.25),
+          0 10px 10px rgba(0,0,0,.2),
+          0 20px 20px rgba(0,0,0,.15);color:#e7d401;}
+
+	</style>
+<body>
+</br><hr>
+<center style="background-image: url({% static 'imgs/background.jpg'%});">
+	</br></br></br>
+	<h1 class="text2" >Entrez les informations necessaires pour votre recherche (ou None sinon) !</h1>
+		</br></br>
+	<a  class="lien" href="http://127.0.0.1:8000/article/">Vos Articles !</a>
+	</br>
+<form method="POST" class="post-form">
+ {% csrf_token %}
+ {{ form.as_p }}
+	</br></br>
+
+ <input class="btn login_btn" type="submit" value="Enregister">
+<div class="msg">
+	{% for message in messages %}
+		<h2>{{ message }}</h2>
+	{% endfor %}
+        </div>
+</form>
+
+	</br></br>
+</center>
+</body>
+<footer>
+<a class="fab fa-instagram" href=""></a>
+<a class="fab fa-facebook" href=""></a>
+<a class="fas fa-envelope" href=""></a>
+</footer>
+
+</html>

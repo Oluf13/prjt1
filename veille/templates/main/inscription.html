@@ -1,0 +1,246 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'veille/style.css' %}">
+<!DOCTYPE html>
+<title>Inscription</title>
+<head>
+	<link rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/a77b2571a6.js" crossorigin="anonymous"></script>
+</head>
+</br>
+<div id="menu-slider">
+	<div id="menu-block">
+			<nav href="#" class="menu-close" rel="nofollow">
+				<ul class="level-1">
+					<li> <a class="menu-item" href="" target="_blank">Vamo </a> </li>
+					<li class="wnd-active wnd-homepage"><a  href="http://127.0.0.1:8000"><span class="menu-item-text">Accueil</span></a></li>
+					<li>	<a  href="http://127.0.0.1:8000/connexion"><span class="menu-item-text">Connexion</span></a>	</li></ul>
+								</nav></div></div>
+
+</header>
+<style>
+	    center{
+	     background-repeat:no-repeat;
+	     background-size:100%;
+	     }
+        h1{text-transform:uppercase;
+          font-size:20px;}
+        ul {
+           list-style-type: none;
+           margin: 0;
+            padding: 0;}
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #000000  !important;
+		}
+		.user_card {
+		    top:50px;
+		    left:350px;
+			width: 320px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: #fdd92c;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+        .span{
+        background:#999999;}
+		.form_container {
+			margin-top: 20px;
+		}
+
+		#form-title{
+			color: #000000;
+		}
+		.login_btn {
+			width: 100%;
+			background: #000000 !important;
+			color: white; !important;
+		}
+
+		.input-group-text {
+			background: #6d546d !important;
+			color: black !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+              header{
+                  background:#202860;}
+                   header::after{
+                   content:'';
+                   display:table;
+                   clear :both;}
+                   nav ul{
+                     margin:0;
+                     padding:0;
+                     list_style: none;}
+                     nav li{
+                    display: inline-block;
+                   margin-left: 300px;
+                   position:relative;
+                    color: #6facfb;
+                    }
+                   nav a {
+                  color:#FFFFFF;
+                  text-decoration: none;
+                  text-transform:uppercase;
+                  font-size:20px;
+                background:#202860;
+                 }
+
+         input{
+         width:100%;
+         height:30px;
+         clear:both;
+         background:#FFFFFFF;
+         align:center;}
+         label{
+         font-size:20px;
+         }
+
+         .fab{
+         color:white;
+         font-size:40px;
+         margin-left:300px;}
+         .fas{
+         color:white;
+         font-size:40px;
+         margin-left:300px;}
+
+         .text2{
+         font-size:50px;
+         margin-left:100px;
+         margin-top: 0px;
+         text-shadow:0 1px 0 #ccc,
+          0 2px 0 #000000,
+          0 3px 0 #bbb,
+          0 4px 0 #b9b9b9,
+           0 5px 0 #aaa,
+          0 6px 1px rgba(0,0,0,.1),
+          0 0 5px rgba(0,0,0,.1),
+          0 1px 3px rgba(0,0,0,.3),
+          0 3px 5px rgba(0,0,0,.2),
+          0 5px 10px rgba(0,0,0,.25),
+          0 10px 10px rgba(0,0,0,.2),
+          0 20px 20px rgba(0,0,0,.15);color:#e7d401;}
+
+
+ @keyframes tipsy {
+  0 {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+
+}
+
+.menu-item{
+  color: WHITE;
+  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:60px;
+  margin-top:0px;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.menu-item:before,
+.menu-item:after {
+  content: '';
+  padding: .9em .4em;
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  top: 50%;
+  display: block;
+  border: 10px solid black;
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 10s infinite alternate ease-in-out tipsy;
+}
+
+.menu-item:before {
+  border-color: #e0bd00 #e0bd00 #e0bd00 #e0bd00 ;
+  z-index: -1;
+}
+
+.menu-item:after {
+  border-color: #e0bd00 #e0bd00 #e0bd00 #e0bd00;
+  box-shadow: 25px 25px 25px rgba(0, 0,0, 0.8);
+}
+
+
+         </style>
+
+<body>
+</br><hr>
+<center style="background-image: url({% static 'imgs/background.jpg'%});">
+	  <div class="text2">Rejoingnez nous et informez vous sur les techniques les plus récentes. </div>
+	<div class="container h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<h3 id="form-title">Inscrivez vous</h3>
+				</div>
+					<form method="POST" action="" align="left">
+						{% csrf_token %}
+						<div class="input-group mb-3">
+							<div>Nom d'utilisateur </div>
+								<span class="input-group-text"></span>
+
+							{{form.username}}
+						</div>
+						</br></br>
+							<div>Mot de passe  </div>
+							<div class="input-group-append">
+								<span class="input-group-text"></span>
+							{{form.password1}}
+						</div>
+						</br></br>
+						<div class="input-group mb-2">
+							<div>Confirmation </div>
+								<span class="input-group-text"></span>
+							{{form.password2}}
+						</div>
+						</br></br>
+				 			<input class="btn login_btn" type="submit" value="Enregister">
+						    <div>
+						     {% if messages %}
+						        {% for message in messages %}
+						             {{ message }}
+						        {% endfor %}
+						     {% endif %}
+							</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</br></br></br></br></br></br></br></br></br></br></br>
+</center>
+</body>
+<footer>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-facebook"></i>
+<i class="fas fa-envelope"></i>
+</footer>
+</html>
