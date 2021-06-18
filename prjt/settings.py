@@ -36,9 +36,7 @@ SECRET_KEY = 'django-insecure-4aj@)+9528g3du$)189hsh^gh%t9)lzmb4e4qxofmpx+kt%nui
 DEBUG = False
 
 ALLOWED_HOSTS = ["vamo13.herokuapp.com/"] #["*"]
-STATICFILES_DIRS=[
-    "prjt/prjt/veille/static/",
-]
+#STATICFILES_DIRS=["prjt/prjt/veille/static/",]
 
 
 LOGOUT_REDIRECT_URL = "/"
