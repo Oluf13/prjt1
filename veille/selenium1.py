@@ -32,7 +32,7 @@ def cree_fich(name) :
         chrome_options.add_argument("--no-sandbox")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
         driver.get("https://scholar.google.com/")
-        search = driver.find_element_by_name("q")
+        search = driver.find_element_by_class_name("gs_in_txt gs_in_ac") #q
         search.send_keys(requets)
         search.send_keys(Keys.RETURN)
         url = driver.current_url
