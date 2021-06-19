@@ -31,10 +31,16 @@ def cree_fich(name) :
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
-        driver.get("https://scholar.google.com/")
-        search = driver.find_element_by_id('gs_hdr_tsi') #q
-        search.send_keys(requets)
-        search.send_keys(Keys.RETURN)
+        
+        #chrome_browser = webdriver.Chrome()
+        chrome_browser.get("https://scholar.google.com/")
+        Search_input = WebDriverWait(chrome_browser, 30).until(ec.element_to_be_clickable((By.ID, "gs_hdr_tsi")))
+        Search_input.send_keys(requets + Keys.RETURN)
+        
+        #driver.get("https://scholar.google.com/")
+        #search = driver.find_element_by_id('gs_hdr_tsi') #q
+        #search.send_keys(requets)
+        #search.send_keys(Keys.RETURN)
         url = driver.current_url
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5)\
             AppleWebKit/537.36 (KHTML, like Gecko) Cafari/537.36'}
