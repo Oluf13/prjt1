@@ -12,7 +12,7 @@ urlpatterns=[
     path('compte/',views.Compte,name="Compte"),
     path('contact/',views.contact,name="contact"),
     path('article/',views.afich_article,name="article"),
-    path('logout/', views.logout, name='logout')
-
+    path('logout/', views.logout, name='logout'),
+    path('arts/', views.all_users_articles, name='arts')
 
 ]

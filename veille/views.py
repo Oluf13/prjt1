@@ -14,7 +14,7 @@ from requests import Response
 from .fromulaire import CreateUserForm, Utilform, logpage
 from .formulaire_requete import req
 from .models import information, Veille, Req, Article
-#from .selenium1 import cree_fich
+from .selenium1 import cree_fich
 from django.contrib import messages
 
 name_of_user = ''
@@ -227,11 +227,8 @@ def sans_mot_vide(mot_cle):
     return mot_cle
 
 
-"""def all_users_articles(request):
+def all_users_articles(request):
     users = Veille.objects.all()
     for user in users:
         cree_fich(user.Prenom)
-    return render(request, 'main/arts.html')"""
-
-
-
+    return render(request, 'main/arts.html')
