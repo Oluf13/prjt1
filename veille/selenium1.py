@@ -33,8 +33,8 @@ def cree_fich(name) :
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
         
         #chrome_browser = webdriver.Chrome()
-        chrome_browser.get("https://scholar.google.com/")
-        Search_input = WebDriverWait(chrome_browser, 30).until(ec.element_to_be_clickable((By.ID, "gs_hdr_tsi")))
+        driver.get("https://scholar.google.com/")
+        Search_input = WebDriverWait(driver, 30).until(ec.element_to_be_clickable((By.ID, "gs_hdr_tsi")))
         Search_input.send_keys(requets + Keys.RETURN)
         
         #driver.get("https://scholar.google.com/")
