@@ -14,7 +14,7 @@ SECRET_KEY = '3gjm^_scxasa&ewe64tb$ass7t)z*a45aycsqnwo3j!+^=xq&j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOST = ['vamo13.herokuapp.com' ]
+ALLOWED_HOST = ['vamo13.herokuapp.com' ,'vamo13.herokuapp.com']
 
 LOGOUT_REDIRECT_URL = "/"
 # Application definition
