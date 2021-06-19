@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+
 import time
 from .models import Req,Veille,Article
 from django.core.mail import send_mail
@@ -34,7 +35,7 @@ def cree_fich(name) :
         
         #chrome_browser = webdriver.Chrome()
         driver.get("https://scholar.google.com/")
-        Search_input = WebDriverWait(driver, 30).until(ec.element_to_be_clickable((By.ID, "gs_hdr_tsi")))
+        Search_input = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.ID, "gs_hdr_tsi")))
         Search_input.send_keys(requets + Keys.RETURN)
         
         #driver.get("https://scholar.google.com/")
