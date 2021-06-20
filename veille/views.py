@@ -45,10 +45,11 @@ def contact(request):
 
 def Inscription(request):
     if request.method == "POST":
-        global user_1
+        #global user_1
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
+            global user_1
             user_1 = form.cleaned_data['username']
             print(user_1)
             return redirect('contact')
