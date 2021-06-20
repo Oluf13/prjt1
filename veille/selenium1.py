@@ -134,8 +134,10 @@ def cree_fich(name) :
                                     nv_article.abstract = abstract.get_text()
                                 j += 2
                     tour += 1
-                x=(int) (date.split()[3])
-                print(x)
+                try:
+                    x=(int) (date.split()[0])
+                except:
+                    x=11
 
                 if(x<5) :
                     nv=0
