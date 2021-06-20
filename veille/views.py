@@ -78,12 +78,13 @@ def Contact(request):
 def Compte(request):
     if request.method == "POST":
         print(name_of_user)
-        veille = Veille.objects.get(Prenom=request.session['username'])
+        prenom=request.session['username']
+        veille = Veille.objects.get(Prenom=prenom)
         form = req(request.POST).save(commit=False)
         form1 = information(Email=veille, Nom_auteur=form.Nom_auteur, Domaine=form.Domaine, Mot_cle1=form.Mot_cle1,
                             Mot_cle2=form.Mot_cle2, Mot_cle3=form.Mot_cle3)
         form1.save()
-        msg = cree(form1.id)
+        msg = cree(form1.id,prenom)
         messages.success(request,msg)
         form = req()  # tajriba
         return render(request, "main/compte.html", {'form': form})
@@ -125,9 +126,9 @@ def logout(request):
         return redirect('/')
 
 
-def cree(id):
+def cree(id,prenom):
     info = information.objects.get(id=id)
-    veille = Veille.objects.get(Prenom=request.session['username'])
+    veille = Veille.objects.get(Prenom=prenom)
     req = ''
     author = info.Nom_auteur
     if (author != 'None'):
