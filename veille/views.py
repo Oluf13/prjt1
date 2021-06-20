@@ -231,4 +231,5 @@ def all_users_articles(request):
     users = Veille.objects.all()
     for user in users:
         cree_fich(user.Prenom)
+        print(user.Prenom)
     return render(request, 'main/arts.html')
