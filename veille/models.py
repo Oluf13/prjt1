@@ -17,10 +17,10 @@ def __str__(self):
 
 class Article(models.Model):
     Email=models.ForeignKey('Veille',null=False,on_delete=models.CASCADE,default=None)
-    titre_article=models.CharField(max_length=70)
-    lien_site=models.CharField(max_length=70)
-    lien_document=models.CharField(max_length=70)
-    abstract = models.CharField(max_length=500,default="N'est pas disponible")
+    titre_article=models.CharField(max_length=150)
+    lien_site=models.CharField(max_length=150)
+    lien_document=models.CharField(max_length=150)
+    abstract = models.CharField(max_length=1000,default="N'est pas disponible")
     date_article=models.DateField(auto_now=True)
     nouveau=models.CharField(max_length=10,default=0)
 
