@@ -32,7 +32,12 @@ def contact(request):
         #print(form.Nom)
         if form.is_valid():
              form1=Veille(Nom= form.cleaned_data['Nom'],Prenom=user_1,Confirmation_email= form.cleaned_data['Confirmation_email'],Email = form.cleaned_data['Email'])
-             if form1.is_valid():
+             v=Veille.objects.all()
+             var=0  #false
+             for varr in v :
+                if varr.Prenom==form1.Prenom :
+                    var=1
+             if var==0 :
                 form1.save()
                 return redirect('Acceuil')
              else:
