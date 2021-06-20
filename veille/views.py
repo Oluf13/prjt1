@@ -78,7 +78,7 @@ def Contact(request):
 def Compte(request):
     if request.method == "POST":
         print(name_of_user)
-        veille = Veille.objects.get(Prenom=name_of_user)
+        veille = Veille.objects.get(Prenom=request.user.username)
         form = req(request.POST).save(commit=False)
         form1 = information(Email=veille, Nom_auteur=form.Nom_auteur, Domaine=form.Domaine, Mot_cle1=form.Mot_cle1,
                             Mot_cle2=form.Mot_cle2, Mot_cle3=form.Mot_cle3)
@@ -96,7 +96,7 @@ def loginPage(request):
     if request.method == 'POST':
         global name_of_user
         form = logpage(request.POST).save(commit=False)
-        name_of_user = form.Nom
+        
         # name_of_user==request.user.username
         print(name_of_user)
         user = auth.authenticate(request, username=form.Nom, password=form.Mot_de_passe)
@@ -117,8 +117,8 @@ def loginPage(request):
 
 
 def logout(request):
-        veille = Veille.objects.get(Prenom=name_of_user)
-        if(deja_article==1) : deja_vu(veille.Email)
+        veille = Veille.objects.get(Prenom=request.user.username)
+        deja_vu(veille.Email)
         print(2)
         auth.logout(request)
         return redirect('/')
@@ -126,7 +126,7 @@ def logout(request):
 
 def cree(id):
     info = information.objects.get(id=id)
-    veille = Veille.objects.get(Prenom=name_of_user)
+    veille = Veille.objects.get(Prenom=request.user.username)
     req = ''
     author = info.Nom_auteur
     if (author != 'None'):
@@ -174,9 +174,7 @@ def cree(id):
 
 
 def afich_article(request):
-    global deja_article
-    deja_article=1
-    veille = Veille.objects.get(Prenom=name_of_user)
+    veille = Veille.objects.get(Prenom=request.user.username)
     article = Article.objects.filter(Email=veille).order_by('-date_article')
 
     msg = ''
