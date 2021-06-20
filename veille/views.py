@@ -31,7 +31,7 @@ def contact(request):
         form=Utilform(request.POST)
         #print(form.Nom)
         if form.is_valid():
-             form1=Veille(Nom= form.cleaned_data['Nom'],Prenom=user_1,Confirmation_email= form.cleaned_data['Confirmation_email'],Email = form.cleaned_data['Email'])
+             form1=Veille(Nom= form.cleaned_data['Nom'],Prenom=request.session['username'],Confirmation_email= form.cleaned_data['Confirmation_email'],Email = form.cleaned_data['Email'])
              v=Veille.objects.all()
              var=0  #false
              for varr in v :
@@ -58,9 +58,9 @@ def Inscription(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            global user_1
-            user_1 = form.cleaned_data['username']
-            print(user_1)
+            
+            request.session['username']= form.cleaned_data['username']
+            
             return redirect('contact')
         else:
             form = CreateUserForm()
