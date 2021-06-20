@@ -32,9 +32,13 @@ def contact(request):
         #print(form.Nom)
         if form.is_valid():
              form1=Veille(Nom= form.cleaned_data['Nom'],Prenom=user_1,Confirmation_email= form.cleaned_data['Confirmation_email'],Email = form.cleaned_data['Email'])
-             form1.save()
-             print(form1.Prenom)
-             return redirect('Acceuil')
+             if form1.is_valid():
+                form1.save()
+                return redirect('Acceuil')
+             else:
+                    messages.success(request,"les donnees sont incorrectes .")
+                    form = Utilform()
+                    render(request, "Contact.html", {'form': form})
         else:
              messages.success(request,"les donnees sont incorrectes .")
              form = Utilform()
