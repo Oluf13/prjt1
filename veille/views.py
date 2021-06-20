@@ -96,7 +96,7 @@ def loginPage(request):
     if request.method == 'POST':
         global name_of_user
         form = logpage(request.POST).save(commit=False)
-        
+        request.session['user']=form.Nom
         # name_of_user==request.user.username
         print(name_of_user)
         user = auth.authenticate(request, username=form.Nom, password=form.Mot_de_passe)
@@ -105,7 +105,7 @@ def loginPage(request):
             login(request, user)
             #cree_fich(name_of_user)
             print(1)
-            request.session['user']=user.username
+            
             return redirect('Compte')
         else:
             messages.success(request,"Username ou le mot de passe est incorrecte .")
