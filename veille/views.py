@@ -78,7 +78,7 @@ def Contact(request):
 def Compte(request):
     if request.method == "POST":
         print(name_of_user)
-        veille = Veille.objects.get(Prenom=request.user.username)
+        veille = Veille.objects.get(Prenom=request.session['user'])
         form = req(request.POST).save(commit=False)
         form1 = information(Email=veille, Nom_auteur=form.Nom_auteur, Domaine=form.Domaine, Mot_cle1=form.Mot_cle1,
                             Mot_cle2=form.Mot_cle2, Mot_cle3=form.Mot_cle3)
@@ -105,6 +105,7 @@ def loginPage(request):
             login(request, user)
             #cree_fich(name_of_user)
             print(1)
+            request.session['user']=user.username
             return redirect('Compte')
         else:
             messages.success(request,"Username ou le mot de passe est incorrecte .")
@@ -117,7 +118,7 @@ def loginPage(request):
 
 
 def logout(request):
-        veille = Veille.objects.get(Prenom=request.user.username)
+        veille = Veille.objects.get(Prenom=request.session['user'])
         deja_vu(veille.Email)
         print(2)
         auth.logout(request)
@@ -126,7 +127,7 @@ def logout(request):
 
 def cree(id):
     info = information.objects.get(id=id)
-    veille = Veille.objects.get(Prenom=request.user.username)
+    veille = Veille.objects.get(Prenom=request.session['user'])
     req = ''
     author = info.Nom_auteur
     if (author != 'None'):
@@ -174,7 +175,7 @@ def cree(id):
 
 
 def afich_article(request):
-    veille = Veille.objects.get(Prenom=request.user.username)
+    veille = Veille.objects.get(Prenom=request.session['user'])
     article = Article.objects.filter(Email=veille).order_by('-date_article')
 
     msg = ''
