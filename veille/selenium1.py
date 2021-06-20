@@ -37,7 +37,7 @@ def cree_fich(name) :
         driver.get("https://scholar.google.com/")
         time.sleep(3)
         
-        search=driver.find_element_by_xpath("//*[@id="gs_hdr_tsi"]")                                                                          
+        search=driver.find_element_by_xpath("/html/body/div/div[7]/div[1]/div[2]/form/div/input")                                                                          
         search.send_keys(requets)                                                                               
         search.send_keys(Keys.RETURN)  
         
