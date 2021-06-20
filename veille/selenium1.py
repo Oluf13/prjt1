@@ -23,14 +23,14 @@ def cree_fich(name) :
         if r.Email==user :
             Req_imp.append(r.requette)
             print(r.requette)
-
+    chrome_options =webdriver.ChromeOptions()
+    chrome_options.binary_location=os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
     for requets in Req_imp :
         #driver = webdriver.Chrome("C:/Users/HP/Desktop/pfa/prjt1/veille/chromedriver.exe")
-        chrome_options =webdriver.ChromeOptions()
-        chrome_options.binary_location=os.environ.get("GOOGLE_CHROME_BIN")
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--no-sandbox")
+        
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"),chrome_options=chrome_options)
         
         #chrome_browser = webdriver.Chrome()
