@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '3gjm^_scxasa&ewe64tb$ass7t)z*a45aycsqnwo3j!+^=xq&j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOST=['vamo13.herokuapp.com']
 
@@ -34,7 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4aj@)+9528g3du$)189hsh^gh%t9)lzmb4e4qxofmpx+kt%nui'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['vamo13.herokuapp.com'] 
 
